@@ -19,15 +19,15 @@ art.welcome()
 
 while True:
     question = input('Enter a qusetion (or type "Quit" to Exit): ')
-    if question == 'Quit':
+    if question.lower() == 'Quit'.lower():
         break
     art.processing()
     time.sleep(1)
     print()
 
     # Getting and printing random answer from the list:
-    ansNumber = rand.randint(0, len(answers))
-    print('~' * (len(answers[ansNumber])-1))
-    print(answers[ansNumber][:-1])
-    print('~' * (len(answers[ansNumber])-1))
+    answer = rand.choice(answers)
+    print('~' * len(answer[:-1]))
+    print(answer[:-1])
+    print('~' * len(answer[:-1]))
     print()
